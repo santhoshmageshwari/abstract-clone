@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 8%
+        }
+
+        .nav-right {
+            display: flex;
+            justify-content: end;
+            text-align: end;
+            width: 60%;
+            /* margin-left: 20%; */
+            font-size: small;
+            border-radius: 20%;
+        }
+
+        .nav-right-alt {
+            display: none;
+        }
+
+        .nav-right-alt i {
+            margin-left: 10px
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: flex-start;
+            height: 50%;
+            text-align: start;
+            width: 30%;
+        }
+
+        .nav-left h1 {
+            margin: 5px 5px;    
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin-left: 20px;
+            font-size: 25px;
+            border-radius: 10px;
+        }
+
+        .btn-1 {
+            background-color: black;
+            border: 1px solid white;
+            color: white;
+
+        }
+
+        .btn-2 {
+            background-color: #4C5FD5;
+            border: 1px solid #4C5FD5;
+            color: white;
+        }
+
+        .input {
+            width: 30%;
+        }
+
+        .section1 {
+            height: 100vh;
+            background-color: #dadbf1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont {
+            width: 50%;
+        }
+
+        .cont h1 {
+            font-size: 500%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cont input {
+            width: 100%;
+            height: 60px;
+            margin-top: 50px;
+        }
+
+        .box {
+            /* width: 50%; */
+            display: flex;
+            font-size: 21px;
+            margin-top: 80px;
+        }
+
+        .box .img {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .box .para {
+            width: 70%;
+        }
+
+        .para h3,
+        p {
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            line-height: 30px;
+        }
+
+        .para p {
+            font-size: 22px;
+        }
+
+        .para a {
+            text-decoration: none;
+            color: #4C5FD5;
+        }
+
+
+        .main-section {
+            margin-top: 100px;
+            display: grid;
+            width: 80%;
+            margin-left: 10%;
+            grid-template-columns: 1fr 1fr;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        footer {
+            margin-top: 170px;
+            width: 100%;
+            min-height: 60vh;
+            background-color: black;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 50px;
+        }
+
+        .foot-item ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .foot-item ul li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .foot-item h2 {
+            margin-bottom: 20px;
+        }
+
+        .foot-left {
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            /* margin-left: 7%; */
+            padding-top: 50px;
+        }
+
+        .foot-right {
+            width: 20%;
+            display: flex;
+            align-items: end;
+        }
+
+
+
+        @media screen and (max-width:1200px) {
+            .nav-right {
+                display: none;
+            }
+            .nav-left{
+                width: 50%;
+            }
+            .nav-right-alt {
+                display: block;
+            }
+
+            .a h2 {
+                display: inline;
+            }
+        }
+
+        @media screen and (max-width:720px) {
+            .main-section {
+                display: grid;
+                width: 100%;
+                margin-left: 0;
+                grid-template-columns: 1fr;
+            }
+            
+
+            .foot-left{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .foot-right{
+                width: 40%;
+            }
+            footer{
+                display: block;
+            }
+            .cont{
+                width: 80%;
+            }
+            .cont h1{
+                font-size: 300%;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+            .cont {
+                width: 100%;
+            }
+
+            .nav-left{
+                     width: 70%;
+            }
+            .nav-left h1{
+                font-size: 17px;
+           
+            }
+            .nav-right-alt{
+                width: 30%;
+            }
+            .cont h1 {
+                font-size: 200%;
+            }
+
+            .section1 {
+                height: 60vh;
+            }
+
+            footer {
+                display: block;
+            }
+            .foot-right{
+                width: 100%;
+                margin-top: 40px;
+            }
+              .foot-left {
+                width: 60%;
+                display: block;
+                margin-left: 20%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <!-- <img src="" alt=""> -->
+            <h1>Abstract|</h1>
+            <h1>Help center</h1>
+
+        </div>
+        <div class="nav-right">
+            <input type="text" placeholder="Search" class="btn input">
+            <button class="btn btn-1">Submit a Request</button>
+            <button class="btn btn-2">Sign in</button>
+        </div>
+        <div class="nav-right-alt">
+            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff; font-size: 25px;"></i>
+            <i class="fa-solid fa-bars" style="color: #ffffff; font-size:25px"></i>
+        </div>
+    </nav>
+
+    <header class="section1">
+        <div class="cont">
+            <h1>How can we help?</h1>
+            <input type="text" placeholder="Search">
+        </div>
+    </header>
+
+    <section class="main-section">
+        <div class="box">
+            <div class="img">
+                <img src="https://help.goabstract.com/hc/theming_assets/01HZH4D4GACXWCRKK6JHQ730XD" alt="" width="50%"
+                    height="40%">
+            </div>
+            <div class="para">
+                <h3>
+                    Using Abstract</h3>
+                <p>Abstract lets you manage, version, and document your designs in one place.</p>
+                <a href="/suresh.html">Learn More →
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img src="https://help.goabstract.com/hc/theming_assets/01HZH4D45NKFCN3388ZCBJB878" alt="" width="50%"
+                    height="40%">
+            </div>
+            <div class="para">
+                <h3>Manage your account</h3>
+                <p>Configure your account settings, such as your email, profile details, and password.</p>
+                <a href="/hwcss.html">Learn More →
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img src="https://help.goabstract.com/hc/theming_assets/01HZH4D3M8CRR0C2V5GREVR6HK" alt="" width="50%"
+                    height="40%">
+            </div>
+            <div class="para">
+                <h3>Manage organizations, teams, and projects</h3>
+                <p>Use Abstract organizations, teams, and projects to organize your people and your work.</p>
+                <a href="suresh1.html">Learn More →
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img src="https://help.goabstract.com/hc/theming_assets/01HZH4D38K1S1M9WKWSQZE62YE" alt="" width="50%"
+                    height="40%">
+            </div>
+            <div class="para">
+                <h3>
+                    Manage billing</h3>
+                <p>Change subscriptions and payment details.</p>
+                <a href="suresh.html">Learn More →
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img src="https://help.goabstract.com/hc/theming_assets/01HZH4D3S3QY5190TZE3H8ZSVK" alt="" width="50%"
+                    height="40%">
+            </div>
+            <div class="para">
+                <h3>
+                    Authenticate to Abstract</h3>
+                <p>Set up and configure SSO, SCIM, and Just-in-Time provisioning.</p>
+                <a href="">Learn More →
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img src="https://help.goabstract.com/hc/theming_assets/01HZH4D3G4S2K93BN3WJPT8600" alt="" width="50%"
+                    height="40%">
+            </div>
+            <div class="para">
+                <h3>
+                    Abstract support</h3>
+                <p>Get in touch with a human.</p>
+                <a href="">Learn More →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="foot-left">
+            <div class="foot-item">
+                <h2>Abstract</h2>
+                <ul>
+                    <li>
+                        <a href="">Start Trial</a>
+                    </li>
+                    <li>
+                        <a href="">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="">Download</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="foot-item">
+                <h2>Resources</h2>
+                <ul>
+                    <li>
+                        <a href="">Blog</a>
+                    </li>
+                    <li>
+                        <a href="">Help Center</a>
+                    </li>
+                    <li>
+                        <a href="">Release Note</a>
+                    </li>
+                    <li>
+                        <a href="">Status</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="foot-item">
+                <h2>Community</h2>
+                <ul>
+                    <li>
+                        <a href="">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="">Linked In</a>
+                    </li>
+                    <li>
+                        <a href="">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="">Dribble</a>
+                    </li>
+                    <li>
+                        <a href="">Podcast</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="foot-item">
+                <h2>Company</h2>
+                <ul>
+                    <li>
+                        <a href="">About Us</a>
+                    </li>
+                    <li>
+                        <a href="">Careers</a>
+                    </li>
+                    <li>
+                        <a href="">Legal</a>
+                    </li>
+                </ul>
+                <h2 style="margin-top: 20px; margin-bottom: 10px;">Content us</h2>
+                <ul>
+                    <li>
+                        <a href="">info@goabstract.com</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="foot-right">
+            <h3>
+                © Copyright 2025
+
+                Abstract Studio Design, Inc.
+
+                All rights reserved</h3>
+        </div>
+    </footer>
+</body>
+
+</html>
